@@ -1,0 +1,15 @@
+node_modules/
+dist/
+crawler/output/
+crawler/assets/img/
+crawler/logs/
+crawler/state/
+crawler/tmp/
+web-vue/public/data/
+web-vue/public/media/
+.DS_Store
+*.local
+coverage/
+test-results/
+personal-data/
+DailyDash-备份-*.json

@@ -1,0 +1,10 @@
+node_modules
+dist
+package-lock.json
+crawler/output
+crawler/logs
+crawler/state
+crawler/tmp
+web-vue/public/data
+web-vue/public/media
+PRD.md

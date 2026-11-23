@@ -1,0 +1,395 @@
+{
+  "words": [
+    {
+      "w": "serendipity",
+      "phonetic": "/ˌserənˈdɪpəti/",
+      "pos": "n.",
+      "cn": "不期而遇的美好；意外发现",
+      "eg": "Finding this little bookshop was pure serendipity.",
+      "egCn": "发现这家小书店，纯属美丽的巧合。",
+      "memory": "把它和一次偶然遇见的美好联系起来。"
+    },
+    {
+      "w": "resilience",
+      "phonetic": "/rɪˈzɪliəns/",
+      "pos": "n.",
+      "cn": "韧性；恢复力",
+      "eg": "Small daily habits help build resilience.",
+      "egCn": "每天的小习惯有助于培养韧性。",
+      "memory": "像弹簧一样，在压力过后恢复。"
+    },
+    {
+      "w": "wander",
+      "phonetic": "/ˈwɒndə(r)/",
+      "pos": "v.",
+      "cn": "漫步；闲逛",
+      "eg": "We wandered through the quiet streets.",
+      "egCn": "我们漫步在安静的街道上。",
+      "memory": "想象一次没有目的地的散步。"
+    },
+    {
+      "w": "nourish",
+      "phonetic": "/ˈnʌrɪʃ/",
+      "pos": "v.",
+      "cn": "滋养；培育",
+      "eg": "Reading nourishes the mind.",
+      "egCn": "阅读滋养心灵。",
+      "memory": "食物滋养身体，阅读滋养心灵。"
+    },
+    {
+      "w": "curiosity",
+      "phonetic": "/ˌkjʊəriˈɒsəti/",
+      "pos": "n.",
+      "cn": "好奇心；求知欲",
+      "eg": "Curiosity opens new doors.",
+      "egCn": "好奇心开启新的可能。",
+      "memory": "curious（好奇的）变成名词 curiosity。"
+    },
+    {
+      "w": "tranquil",
+      "phonetic": "/ˈtræŋkwɪl/",
+      "pos": "adj.",
+      "cn": "宁静的；平和的",
+      "eg": "The lake was tranquil at dawn.",
+      "egCn": "黎明时湖面十分宁静。",
+      "memory": "把词语与清晨平静的湖面联系起来。"
+    },
+    {
+      "w": "embrace",
+      "phonetic": "/ɪmˈbreɪs/",
+      "pos": "v.",
+      "cn": "拥抱；欣然接受",
+      "eg": "Embrace the changes in your life.",
+      "egCn": "欣然接受生活中的变化。",
+      "memory": "从张开双臂的拥抱，延伸到接受。"
+    },
+    {
+      "w": "bloom",
+      "phonetic": "/bluːm/",
+      "pos": "v. / n.",
+      "cn": "开花；花朵",
+      "eg": "The garden begins to bloom in spring.",
+      "egCn": "春天花园开始绽放。",
+      "memory": "想象花朵慢慢开放的过程。"
+    },
+    {
+      "w": "mindful",
+      "phonetic": "/ˈmaɪndfəl/",
+      "pos": "adj.",
+      "cn": "留心的；专注的",
+      "eg": "Be mindful of the little things.",
+      "egCn": "留心生活中的小事。",
+      "memory": "mind（心思）＋ ful，心里留意着。"
+    },
+    {
+      "w": "cherish",
+      "phonetic": "/ˈtʃerɪʃ/",
+      "pos": "v.",
+      "cn": "珍惜；珍爱",
+      "eg": "Cherish the time you spend together.",
+      "egCn": "珍惜一起度过的时光。",
+      "memory": "把珍贵的东西好好放在心上。"
+    },
+    {
+      "w": "balance",
+      "phonetic": "",
+      "pos": "n. / v.",
+      "cn": "平衡",
+      "eg": "Find a balance between work and rest.",
+      "egCn": "在工作与休息之间找到平衡。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "explore",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "探索",
+      "eg": "We explore a different path each weekend.",
+      "egCn": "每个周末我们探索一条不同的路线。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "grateful",
+      "phonetic": "",
+      "pos": "adj.",
+      "cn": "感激的",
+      "eg": "I am grateful for your help.",
+      "egCn": "我很感激你的帮助。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "inspire",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "启发；激励",
+      "eg": "Nature can inspire new ideas.",
+      "egCn": "大自然可以启发新的想法。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "reflect",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "反思；反射",
+      "eg": "Take a moment to reflect on your day.",
+      "egCn": "花一点时间回顾你的一天。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "observe",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "观察",
+      "eg": "Observe the small changes around you.",
+      "egCn": "观察身边细小的变化。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "routine",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "日常惯例",
+      "eg": "A morning walk is part of my routine.",
+      "egCn": "晨间散步是我日常生活的一部分。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "clarity",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "清晰；明晰",
+      "eg": "A short break can bring clarity.",
+      "egCn": "短暂休息可以让思路更清晰。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "gentle",
+      "phonetic": "",
+      "pos": "adj.",
+      "cn": "温和的；轻柔的",
+      "eg": "A gentle breeze moved the leaves.",
+      "egCn": "一阵微风吹动了树叶。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "persist",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "坚持",
+      "eg": "Persist even when progress feels slow.",
+      "egCn": "即使进步缓慢，也要坚持。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "horizon",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "地平线；眼界",
+      "eg": "Clouds gathered on the horizon.",
+      "egCn": "云层在地平线上聚集。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "discover",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "发现",
+      "eg": "Discover something new every day.",
+      "egCn": "每天发现一些新事物。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "patience",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "耐心",
+      "eg": "Learning a language takes patience.",
+      "egCn": "学习语言需要耐心。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "delight",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "喜悦",
+      "eg": "The little garden is a daily delight.",
+      "egCn": "这个小花园是每日的乐趣。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "effort",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "努力",
+      "eg": "Every small effort matters.",
+      "egCn": "每一份微小的努力都有意义。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "breathe",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "呼吸",
+      "eg": "Pause and breathe slowly.",
+      "egCn": "停一停，慢慢呼吸。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "focus",
+      "phonetic": "",
+      "pos": "n. / v.",
+      "cn": "专注；焦点",
+      "eg": "Focus on one thing at a time.",
+      "egCn": "一次专注做一件事。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "kindness",
+      "phonetic": "",
+      "pos": "n.",
+      "cn": "善意",
+      "eg": "A little kindness can change a day.",
+      "egCn": "一点善意就能改变一天。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "sustain",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "维持；支撑",
+      "eg": "Good habits sustain steady progress.",
+      "egCn": "良好习惯支撑稳步进步。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    },
+    {
+      "w": "appreciate",
+      "phonetic": "",
+      "pos": "v.",
+      "cn": "欣赏；感激",
+      "eg": "Appreciate the beauty in ordinary moments.",
+      "egCn": "欣赏平凡时刻中的美好。",
+      "memory": "结合例句记忆这个词，并试着用它描述自己的生活。"
+    }
+  ],
+  "poems": [
+    {
+      "id": "p1",
+      "title": "山居秋暝",
+      "dynasty": "唐",
+      "author": "王维",
+      "content": [
+        "空山新雨后，天气晚来秋。",
+        "明月松间照，清泉石上流。",
+        "竹喧归浣女，莲动下渔舟。",
+        "随意春芳歇，王孙自可留。"
+      ],
+      "bestLine": "明月松间照，清泉石上流。",
+      "translation": "空寂的山中刚下过雨，傍晚带来了秋天的凉意。明月从松林间洒下清光，清泉在山石上淙淙流淌。竹林喧响，是洗衣女子归来；莲叶摇动，是渔舟顺流而下。任凭春日芳菲消歇，这秋山之中自有值得留恋的美好。",
+      "notes": "暝：日落时分。浣女：洗衣的女子。王孙：诗人自指。",
+      "appreciation": "诗以雨后山林为背景，融明月、松林、清泉与人间生活于一体。动静相映，清幽而不冷寂，流露出对山居生活的热爱。"
+    },
+    {
+      "id": "p2",
+      "title": "饮酒·其五",
+      "dynasty": "东晋",
+      "author": "陶渊明",
+      "content": [
+        "结庐在人境，而无车马喧。",
+        "问君何能尔？心远地自偏。",
+        "采菊东篱下，悠然见南山。",
+        "山气日夕佳，飞鸟相与还。",
+        "此中有真意，欲辨已忘言。"
+      ],
+      "bestLine": "采菊东篱下，悠然见南山。",
+      "translation": "居住在人世间，却听不到车马的喧闹。问我为何能够如此？心志高远，居所自然就显得偏静。在东篱下采菊，悠然间望见南山。傍晚山间景色正好，飞鸟结伴而还。这里面有生活的真意，想分辨清楚却忘记了言语。",
+      "notes": "结庐：建造居所。尔：如此。日夕：傍晚。",
+      "appreciation": "诗人将平淡的日常写得意味悠长。一个“见”字，呈现出不经意间与自然相遇的悠然心境。"
+    },
+    {
+      "id": "p3",
+      "title": "终南别业",
+      "dynasty": "唐",
+      "author": "王维",
+      "content": [
+        "中岁颇好道，晚家南山陲。",
+        "兴来每独往，胜事空自知。",
+        "行到水穷处，坐看云起时。",
+        "偶然值林叟，谈笑无还期。"
+      ],
+      "bestLine": "行到水穷处，坐看云起时。",
+      "translation": "中年以后颇爱清静，晚年定居终南山边。兴致来时常常独自出游，美好的乐趣唯有自己体会。走到溪水尽头，便坐下来观看云起。偶然遇见林间老者，谈笑间忘记了归期。",
+      "notes": "陲：边缘。值：遇见。叟：老翁。",
+      "appreciation": "诗中没有刻意安排的目的地，只有随兴而行的自在。水穷而云起，将山居生活化作开阔从容的人生态度。"
+    }
+  ],
+  "knowledge": [
+    {
+      "category": "天文",
+      "title": "日落为什么是橘红色的？",
+      "intro": "一束阳光，藏着大气与色彩的秘密。",
+      "body": "阳光看起来接近白色，实际上包含多种波长的可见光。太阳位置较高时，光穿过大气的路程较短；接近地平线时，光线需要经过更长的大气路径。大气中的分子会散射光，短波长的蓝紫光比长波长的红光更容易被散射。瑞利散射强度大致与波长的四次方成反比，因此大量短波长光在到达观察者之前就已偏离原来的方向，剩下的直射光中红色与橙色的比例较高。\n\n日落并不总是相同的颜色。云层高度、空气湿度以及气溶胶颗粒，都会改变光的传播和散射过程。云滴与较大的颗粒还会产生不同于分子散射的效应，形成粉红、金黄等层次。观察日落时，可以留意天空从地平线到头顶的颜色渐变，比较晴天与薄云天气的区别。欣赏这些变化，无须直视太阳，选择太阳已被地形遮挡或落下后的余晖会更舒适。",
+      "fact": "红光的典型波长约为 620–750 纳米，蓝光约为 450–495 纳米。",
+      "ref": "演示科普内容 · 瑞利散射基础知识"
+    },
+    {
+      "category": "动物",
+      "title": "章鱼为什么有三颗心脏？",
+      "intro": "海洋里的聪明邻居，有一套特别的循环系统。",
+      "body": "章鱼属于软体动物中的头足类。它有一颗体心脏和两颗鳃心脏，共三颗心脏。鳃心脏把血液送到鳃，进行气体交换；体心脏再将富含氧的血液输送到身体各处。与人类依靠血红蛋白运输氧气不同，章鱼使用的呼吸色素是含铜的血蓝蛋白，因此含氧血液呈蓝色。\n\n章鱼有八条腕，腕上的吸盘既能附着，也能感受化学信号，帮助它探索食物和周围环境。它的神经系统分布广泛，大量神经元位于腕部，使腕具备一定的局部信息处理能力。章鱼没有像鱼那样的骨骼，柔软的身体可以进入狭窄的岩缝；但坚硬的喙仍限制了它能够穿过的最小空间。不同种类的章鱼栖息深度与生活方式差异很大，不能把某一种的行为直接推广到整个类群。认识这些身体结构，有助于理解章鱼如何适应复杂的海底环境。",
+      "fact": "章鱼运输氧气依靠含铜的血蓝蛋白，含氧血液呈蓝色。",
+      "ref": "演示科普内容 · 头足类基础知识"
+    }
+  ],
+  "food": {
+    "name": "番茄炖牛腩",
+    "region": "暖心家常菜",
+    "description": "慢慢炖出一锅浓郁，把日子过得热气腾腾。",
+    "difficulty": "中等",
+    "time": "90 分钟",
+    "ingredients": [
+      ["牛腩", "500g"],
+      ["番茄", "3 个"],
+      ["土豆", "1 个"],
+      ["洋葱", "半个"],
+      ["生姜", "3 片"],
+      ["生抽", "2 汤匙"]
+    ],
+    "steps": [
+      "牛腩切块，冷水下锅，煮出浮沫后捞出冲净。",
+      "番茄切块，洋葱切丝。锅中少油，炒香姜片与洋葱。",
+      "放入一半番茄炒出汁，加入牛腩、生抽及足量热水。",
+      "小火炖煮约 60 分钟，再加入土豆与剩余番茄。",
+      "继续炖至牛腩软烂、土豆熟透，按口味加盐并稍微收汁。"
+    ],
+    "tip": "分两次加入番茄，既有浓郁汤底，也能保留番茄的口感。炖煮中补水请用热水。"
+  },
+  "quizzes": [
+    {
+      "id": "q1",
+      "category": "公考常识 · 地理",
+      "question": "下列哪一条河流，被称为世界上流域面积最大的河流？",
+      "options": ["尼罗河", "亚马孙河", "长江", "密西西比河"],
+      "answer": 1,
+      "explain": "亚马孙河位于南美洲，是世界上流域面积最大、流量最大的河流。注意区分河流长度与流域面积这两个概念。",
+      "knowledge": "世界地理 / 河流"
+    },
+    {
+      "id": "q2",
+      "category": "百科常识 · 自然",
+      "question": "章鱼有几颗心脏？",
+      "options": ["1 颗", "2 颗", "3 颗", "4 颗"],
+      "answer": 2,
+      "explain": "章鱼有一颗体心脏，将血液输送到全身；另有两颗鳃心脏，负责将血液泵送至鳃。",
+      "knowledge": "动物 / 头足类"
+    },
+    {
+      "id": "q3",
+      "category": "公考常识 · 人文",
+      "question": "“海内存知己，天涯若比邻”的作者是谁？",
+      "options": ["王勃", "李白", "杜甫", "王维"],
+      "answer": 0,
+      "explain": "诗句出自唐代王勃的《送杜少府之任蜀州》，表达对友人的真挚情谊与豁达态度。",
+      "knowledge": "文学 / 初唐四杰"
+    }
+  ]
+}

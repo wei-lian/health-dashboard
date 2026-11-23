@@ -1,0 +1,520 @@
+/* 较矮窗口优先保证全部导航可达。 */
+@media (max-height: 800px) {
+  .sidebar .little-note {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .sidebar {
+    width: 205px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .main-shell {
+    margin-left: 205px;
+  }
+  main {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .topbar {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .page-heading h1 {
+    font-size: 1.75rem;
+  }
+  .date-chip {
+    font-size: 0.875rem;
+  }
+  .health-grid {
+    gap: 12px;
+  }
+  .health-card {
+    padding: 15px;
+  }
+  .health-card > p {
+    font-size: 0.75rem;
+  }
+  .health-card > p .pill {
+    display: none;
+  }
+  .streak-dots {
+    gap: 3px;
+  }
+  .streak-dots i {
+    width: 7px;
+    height: 7px;
+  }
+  .dashboard-columns {
+    gap: 15px;
+    grid-template-columns: 1.12fr 1fr;
+  }
+  .botanical-art {
+    width: 300px;
+    right: 5px;
+    top: 18px;
+  }
+  .welcome-copy {
+    padding-left: 25px;
+  }
+  .welcome-copy h2 {
+    font-size: 2rem;
+  }
+  .welcome-copy > p {
+    max-width: 270px;
+    line-height: 1.9;
+  }
+  .card-head {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .news-list {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .tiny-label {
+    font-size: 0.6875rem;
+    letter-spacing: 1px;
+  }
+  .recipe-copy {
+    padding: 27px;
+  }
+  .recipe-tags {
+    gap: 10px;
+  }
+}
+@media (max-width: 980px) and (min-width: 761px) {
+  .sidebar {
+    width: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .main-shell {
+    margin-left: 180px;
+  }
+  .brand {
+    font-size: 1.5rem;
+    gap: 9px;
+  }
+  .brand-symbol {
+    width: 34px;
+    height: 38px;
+  }
+  .nav-link {
+    gap: 10px;
+    font-size: 1rem;
+  }
+  .nav-caption span {
+    display: none;
+  }
+  .page-heading {
+    align-items: flex-start;
+  }
+  .date-chip {
+    display: none;
+  }
+  .botanical-art {
+    opacity: 0.6;
+    width: 255px;
+    right: -40px;
+  }
+  .health-grid {
+    gap: 9px;
+  }
+  .health-card {
+    padding: 12px;
+  }
+  .health-card-top > span:first-child {
+    font-size: 0.875rem;
+    gap: 6px;
+  }
+  .mini-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .health-value {
+    font-size: 2.25rem;
+  }
+  .mini-chart,
+  .streak-dots,
+  .health-card-top > .tiny-label {
+    display: none;
+  }
+  .card-head > .tiny-label {
+    display: none;
+  }
+  .card-head h2 {
+    font-size: 1rem;
+  }
+  .card-head > .text-button {
+    font-size: 0.75rem;
+  }
+  .news-item {
+    gap: 8px;
+  }
+  .news-item p {
+    font-size: 0.6875rem;
+  }
+  .news-title {
+    font-size: 0.875rem;
+  }
+  .word-title h3 {
+    font-size: 2.125rem;
+  }
+  .daily-grid,
+  .recipe-card {
+    grid-template-columns: 1fr;
+  }
+  .daily-grid > .dashboard-column {
+    margin-top: 0;
+  }
+  .food-art {
+    min-height: 280px;
+  }
+  .food-art svg {
+    max-width: 300px;
+  }
+  .recipe-copy {
+    padding: 30px;
+  }
+  .toolbar {
+    flex-wrap: wrap;
+  }
+  .music-toolbar h3 {
+    font-size: 1.375rem;
+  }
+  .music-toolbar {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+/* 窄屏采用抽屉导航，保持 375px 单列阅读。 */
+@media (max-width: 760px) {
+  .sidebar {
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.2s;
+    width: 226px;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .main-shell {
+    margin-left: 0;
+  }
+  .nav-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: #1f362b55;
+    z-index: 25;
+  }
+  .mobile-menu {
+    display: inline-flex;
+  }
+  .topbar {
+    height: 61px;
+    padding: 0 15px;
+  }
+  .breadcrumb {
+    gap: 7px;
+    font-size: 0.875rem;
+  }
+  .topbar-right {
+    gap: 10px;
+  }
+  .demo-badge {
+    font-size: 0.75rem;
+  }
+  .avatar {
+    width: 27px;
+    height: 27px;
+  }
+  main {
+    padding: 26px 18px 0;
+  }
+  .page-heading {
+    margin-bottom: 23px;
+  }
+  .page-heading h1 {
+    font-size: 1.75rem;
+    letter-spacing: 0;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 1.8px;
+  }
+  .page-heading p {
+    font-size: 0.875rem;
+    line-height: 1.9;
+  }
+  .date-chip {
+    display: none;
+  }
+  .welcome-banner {
+    min-height: 272px;
+  }
+  .welcome-copy {
+    padding: 24px;
+  }
+  .welcome-copy h2 {
+    font-size: 1.875rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+  }
+  .welcome-copy > p {
+    max-width: 210px;
+    line-height: 1.8;
+    font-size: 0.75rem;
+  }
+  .botanical-art {
+    width: 230px;
+    height: 180px;
+    right: -75px;
+    top: 66px;
+    opacity: 0.45;
+  }
+  .banner-kicker {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+  .banner-tag {
+    font-size: 0.6875rem;
+    right: 17px;
+    bottom: 14px;
+    letter-spacing: 1.3px;
+  }
+  .banner-actions {
+    gap: 15px;
+    margin-top: 22px;
+  }
+  .banner-actions > .text-button {
+    font-size: 0.75rem;
+  }
+  .health-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .health-card {
+    padding: 15px 19px;
+  }
+  .health-value {
+    line-height: 1.5;
+    margin: 5px 0 9px;
+  }
+  .health-card > p {
+    font-size: 0.875rem;
+  }
+  .health-card > p .pill {
+    display: inline-flex;
+  }
+  .health-card-top > span:first-child {
+    font-size: 1rem;
+  }
+  .streak-dots {
+    gap: 7px;
+  }
+  .streak-dots i {
+    width: 10px;
+    height: 10px;
+  }
+  .section-heading {
+    align-items: flex-start;
+    margin-top: 28px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .section-heading h2 {
+    font-size: 1.25rem;
+  }
+  .data-status {
+    font-size: 0.75rem;
+  }
+  .dashboard-columns,
+  .content-grid,
+  .daily-grid,
+  .recipe-card {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-columns,
+  .dashboard-column {
+    gap: 17px;
+  }
+  .card-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .news-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .news-title {
+    font-size: 1rem;
+  }
+  .news-item p {
+    font-size: 0.75rem;
+  }
+  .news-item {
+    padding: 19px 0;
+  }
+  .word-content {
+    padding: 25px 23px;
+  }
+  .word-content blockquote {
+    font-size: 1rem;
+  }
+  .poem-content {
+    padding-top: 28px;
+    padding-bottom: 30px;
+  }
+  .song-row {
+    padding: 15px 0;
+  }
+  .discovery-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    gap: 17px;
+  }
+  .discovery-strip p {
+    line-height: 1.9;
+  }
+  .discovery-strip > .text-button {
+    margin-left: 43px;
+  }
+  .page-footer {
+    font-size: 0.6875rem;
+    line-height: 1.9;
+    align-items: flex-start;
+  }
+  .page-footer > span:first-child {
+    max-width: 190px;
+  }
+  .toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .button {
+    min-height: 40px;
+    font-size: 0.9375rem;
+  }
+  .text-button,
+  .icon-button {
+    min-height: 30px;
+  }
+  .health-grid + .content-grid {
+    margin-top: 17px;
+  }
+  .record-row {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .record-row > .button-group {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .prototype-note {
+    align-items: flex-start;
+    font-size: 0.75rem;
+  }
+  .filter-tabs {
+    gap: 2px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .filter-tabs button {
+    font-size: 0.875rem;
+    padding: 8px 9px;
+  }
+  .music-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 24px 19px;
+  }
+  .music-toolbar h3 {
+    font-size: 1.5rem;
+  }
+  .explore-view > .card > .card-head {
+    flex-wrap: wrap;
+  }
+  .segmented button {
+    padding: 8px;
+    font-size: 0.75rem;
+  }
+  .song-row.large .song-info strong {
+    font-size: 1rem;
+  }
+  .song-row {
+    gap: 10px;
+  }
+  .food-art {
+    min-height: 260px;
+    padding-bottom: 18px;
+  }
+  .food-art svg {
+    max-width: 300px;
+  }
+  .recipe-copy {
+    padding: 28px 23px;
+  }
+  .recipe-copy h2 {
+    font-size: 2.25rem;
+  }
+  .recipe-steps {
+    padding: 25px 23px;
+  }
+  .heritage-card {
+    padding: 25px;
+  }
+  .heritage-card h2 {
+    font-size: 1.875rem;
+  }
+  .settings-body {
+    padding: 22px;
+  }
+  .settings-body > h3 {
+    font-size: 1.375rem;
+  }
+  .settings-body > p {
+    font-size: 0.9375rem;
+  }
+  .backup-counts {
+    padding: 20px 0;
+  }
+  .settings-layout .card-head {
+    flex-wrap: wrap;
+  }
+  .about-row {
+    font-size: 0.875rem;
+  }
+  .about-row strong {
+    font-size: 0.875rem;
+    max-width: 175px;
+    line-height: 1.9;
+  }
+  .record-dialog {
+    padding: 23px;
+    max-height: 90dvh;
+  }
+  .record-dialog label > span {
+    display: block;
+    margin: 6px 0 0;
+  }
+  .toast {
+    left: 50%;
+    width: max-content;
+    bottom: 22px;
+    font-size: 0.9375rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
