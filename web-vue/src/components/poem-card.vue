@@ -1,9 +1,20 @@
 <script setup>
 import { poems } from '../stores/content-store.js'
 import { state, toggleItem, notify, sync } from '../stores/local-store.js'
+import { completePoem, todayStudy } from '../stores/learning-store.js'
 defineProps({ expanded: { type: Boolean, default: false } })
 const index = ref(0)
 const saving = ref(false)
+// 阅读打卡独立于收藏，自动汇入每日诗歌待办。
+async function markRead() {
+  if (saving.value) return
+  saving.value = true
+  try {
+    await completePoem(poem.value.id)
+  } finally {
+    saving.value = false
+  }
+}
 async function saveFavorite() {
   if (saving.value) return
   saving.value = true
@@ -66,6 +77,16 @@ function next() {
       </div></template
     >
     <div class="card-bottom">
+      <button
+        class="text-button"
+        :disabled="saving || sync.saving || !sync.online || todayStudy.poems.includes(poem.id)"
+        :aria-busy="saving"
+        @click="markRead"
+      >
+        <AppIcon name="check" :size="15" />{{
+          todayStudy.poems.includes(poem.id) ? '今日已学习' : '记录今日学习'
+        }}
+      </button>
       <button class="text-button" @click="next">
         <AppIcon name="refresh" :size="14" />换一首
         <span class="muted">{{ index + 1 }}/{{ poems.length }}</span></button

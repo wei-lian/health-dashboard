@@ -141,6 +141,10 @@ async function restore() {
             {{ preview.mealTypes.length }} 个外卖类型、{{ preview.mealHistory.length }}
             次菜单选择。合并时当前同 ID 或同睡眠日的记录优先；原备份文件不会改动。
           </p>
+          <p>
+            {{ preview.wordProgress.length }} 个已学单词 · {{ preview.listeningLogs.length }} 条听力记录 ·
+            {{ preview.todos.length }} 条待办，包含每日学习目标、复习计划和个人造句。
+          </p>
           <label class="import-mode"
             >导入方式<select v-model="importMode" :disabled="restoring">
               <option value="merge">合并，保留本机已有记录</option>

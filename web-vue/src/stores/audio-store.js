@@ -151,12 +151,15 @@ function speak(text, slow) {
     }
   }
   speechSynthesis.speak(utterance)
-  speechTimer = setTimeout(() => {
-    if (token === generation) {
-      stopAudio()
-      notify('系统语音没有响应，请检查英语语音包。', 'error')
-    }
-  }, 60000)
+  speechTimer = setTimeout(
+    () => {
+      if (token === generation) {
+        stopAudio()
+        notify('系统语音没有响应，请检查英语语音包。', 'error')
+      }
+    },
+    Math.max(60000, text.length * (slow ? 160 : 110)),
+  )
 }
 
 // 单词优先词典音频，本机生成的慢速和例句语音可离线播放；缺失时回退浏览器 TTS。

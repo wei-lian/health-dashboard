@@ -7,5 +7,6 @@ crawler/state
 crawler/tmp
 web-vue/public/data
 web-vue/public/media
+web-vue/public/library/vocabulary.json
 PRD.md
 site-content/

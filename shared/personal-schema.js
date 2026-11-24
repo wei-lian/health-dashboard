@@ -1,3 +1,5 @@
+import { defaultLearningPlan, validateLearning } from './learning.js'
+
 export const defaultMealTypes = [
   { id: 'rice', name: '盖浇饭 / 简餐', enabled: true },
   { id: 'noodles', name: '面食 / 米粉', enabled: true },
@@ -18,6 +20,11 @@ export function emptyPersonalData() {
     readNews: [],
     mealTypes: structuredClone(defaultMealTypes),
     mealHistory: [],
+    learningPlan: { ...defaultLearningPlan },
+    wordProgress: [],
+    studyHistory: [],
+    listeningLogs: [],
+    todos: [],
   }
 }
 
@@ -146,6 +153,7 @@ export function validatePersonalData(input) {
       }
     })
   }
+  Object.assign(result, validateLearning(input, calendarDate))
   if (new TextEncoder().encode(JSON.stringify(result)).length > 5_000_000)
     throw new Error('个人数据超过 5MB，请先归档部分历史记录')
   return result
@@ -159,26 +167,54 @@ export function parsePersonalBackup(value) {
 
 export function hasPersonalContent(data) {
   return (
-    ['sports', 'sleeps', 'favorites', 'mastered', 'readNews', 'mealHistory'].some(
-      (key) => data[key]?.length,
-    ) ||
+    [
+      'sports',
+      'sleeps',
+      'favorites',
+      'mastered',
+      'readNews',
+      'mealHistory',
+      'wordProgress',
+      'studyHistory',
+      'listeningLogs',
+      'todos',
+    ].some((key) => data[key]?.length) ||
     Object.keys(data.answers || {}).length > 0 ||
-    JSON.stringify(data.mealTypes) !== JSON.stringify(defaultMealTypes)
+    JSON.stringify(data.mealTypes) !== JSON.stringify(defaultMealTypes) ||
+    JSON.stringify(data.learningPlan || defaultLearningPlan) !== JSON.stringify(defaultLearningPlan)
   )
 }
 
 // 迁移以磁盘版本为准合并同 ID / 同睡眠日冲突；原始输入另存恢复文件。
 export function mergePersonalData(current, incoming) {
   const result = { ...current }
-  for (const key of ['sports', 'sleeps', 'mealHistory']) {
+  for (const key of ['sports', 'sleeps', 'mealHistory', 'wordProgress', 'listeningLogs', 'todos']) {
     const merged = new Map()
-    for (const item of [...incoming[key], ...current[key]])
+    for (const item of [...(incoming[key] || []), ...(current[key] || [])])
       merged.set(key === 'sleeps' ? item.date : item.id, item)
     result[key] = [...merged.values()]
   }
   for (const key of ['favorites', 'mastered', 'readNews'])
     result[key] = [...new Set([...current[key], ...incoming[key]])]
   result.answers = { ...incoming.answers, ...current.answers }
+  result.learningPlan =
+    JSON.stringify(current.learningPlan || defaultLearningPlan) === JSON.stringify(defaultLearningPlan)
+      ? incoming.learningPlan || current.learningPlan || { ...defaultLearningPlan }
+      : current.learningPlan
+  const dates = new Set([...(incoming.studyHistory || []), ...(current.studyHistory || [])].map((i) => i.id))
+  result.studyHistory = [...dates].map((id) => {
+    const old = incoming.studyHistory?.find((i) => i.id === id)
+    const now = current.studyHistory?.find((i) => i.id === id)
+    return {
+      id,
+      ...Object.fromEntries(
+        ['newWords', 'reviewedWords', 'poems'].map((k) => [
+          k,
+          [...new Set([...(old?.[k] || []), ...(now?.[k] || [])])],
+        ]),
+      ),
+    }
+  })
   const types = new Map()
   for (const item of [...incoming.mealTypes, ...current.mealTypes]) types.set(item.id, item)
   const names = new Set()

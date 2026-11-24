@@ -28,7 +28,7 @@ watch(
   <article class="card word-card">
     <div class="card-head">
       <h2><AppIcon name="book" :size="18" />每日单词</h2>
-      <span class="pill subtle">{{ index + 1 }} / {{ words.length }}</span>
+      <RouterLink class="text-button" to="/words">去背单词<AppIcon name="next" :size="15" /></RouterLink>
     </div>
     <SourceStatus module="englishWord" />
     <div class="word-content">

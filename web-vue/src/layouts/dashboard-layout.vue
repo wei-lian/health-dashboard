@@ -4,12 +4,14 @@ import { feedback, initializePersonalData, startPersonalSync, sync } from '../st
 import { hasLiveContent, loadContent } from '../stores/content-store.js'
 import { playback, stopAudio } from '../stores/audio-store.js'
 import { getSession, signOut } from '../utils/auth-session.js'
+import { refreshLearningDate } from '../stores/learning-store.js'
 const route = useRoute()
 const router = useRouter()
 const menuOpen = ref(false)
 let stopSync, sessionTimer
 // 会话在页面停留期间到期或窗口重新聚焦时也会返回登录页。
 function checkSession() {
+  refreshLearningDate()
   if (!getSession()) void router.replace({ name: 'login', query: { redirect: route.fullPath } })
 }
 // 退出后卸载业务布局、停止同步与音频，保留用户记录。
@@ -21,6 +23,7 @@ function handleLogout() {
 onMounted(() => {
   void loadContent()
   void initializePersonalData()
+  refreshLearningDate()
   stopSync = startPersonalSync()
   sessionTimer = setInterval(checkSession, 30000)
   window.addEventListener('focus', checkSession)

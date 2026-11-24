@@ -221,17 +221,11 @@ watch(
         <AppIcon name="book" :size="22" />
         <div>
           <strong>一点点积累，都会算数。</strong>
-          <p>已收藏 {{ state.favorites.length }} 首诗 · 已掌握 {{ state.mastered.length }} 个单词</p>
+          <p>已收藏 {{ state.favorites.length }} 首诗 · 阅读后可记录今日学习</p>
         </div>
       </div>
-      <div class="content-grid learning-grid"><PoemCard expanded /><WordCard expanded /></div>
-      <article v-if="state.mastered.length" class="card mastered-list">
-        <div class="card-head"><h2>已掌握的单词</h2></div>
-        <div class="tag-cloud">
-          <span v-for="word in state.mastered" :key="word" class="pill mint">{{ word }}</span>
-        </div>
-      </article></template
-    >
+      <div class="study-poetry-layout"><PoemCard expanded /><LearningPlan /></div>
+    </template>
     <template v-else-if="route.path === '/digital'"
       ><div class="toolbar">
         <div class="filter-tabs standalone">
