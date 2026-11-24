@@ -1,0 +1,113 @@
+{
+  "runAt": "2026-11-24T06:31:53.410Z",
+  "targetDate": "2026-11-23",
+  "timeZone": "Asia/Shanghai",
+  "mode": "production",
+  "modules": [
+    {
+      "name": "hotNews",
+      "ok": true,
+      "mode": "live",
+      "count": 8,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:29:23.392Z",
+      "attemptedAt": "2026-11-24T06:29:23.392Z",
+      "ms": 2445,
+      "warning": ""
+    },
+    {
+      "name": "quiz",
+      "ok": true,
+      "mode": "curated",
+      "count": 3,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:29:25.839Z",
+      "attemptedAt": "2026-11-24T06:29:25.839Z",
+      "ms": 9,
+      "warning": ""
+    },
+    {
+      "name": "knowledge",
+      "ok": true,
+      "mode": "live",
+      "count": 1,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:29:25.850Z",
+      "attemptedAt": "2026-11-24T06:29:25.850Z",
+      "ms": 6848,
+      "warning": ""
+    },
+    {
+      "name": "songRank",
+      "ok": true,
+      "mode": "live",
+      "count": 100,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:29:32.701Z",
+      "attemptedAt": "2026-11-24T06:29:32.701Z",
+      "ms": 9922,
+      "warning": ""
+    },
+    {
+      "name": "food",
+      "ok": true,
+      "mode": "live",
+      "count": 1,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:29:42.624Z",
+      "attemptedAt": "2026-11-24T06:29:42.624Z",
+      "ms": 26510,
+      "warning": ""
+    },
+    {
+      "name": "poetry",
+      "ok": true,
+      "mode": "live",
+      "count": 3,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:30:09.136Z",
+      "attemptedAt": "2026-11-24T06:30:09.136Z",
+      "ms": 14370,
+      "warning": ""
+    },
+    {
+      "name": "englishWord",
+      "ok": true,
+      "mode": "degraded",
+      "count": 10,
+      "date": "2026-11-23",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:30:23.508Z",
+      "attemptedAt": "2026-11-24T06:30:23.508Z",
+      "ms": 85256,
+      "warning": "9 个词的联网补全或词典音频不可用。 已生成 10 个单词的本机离线英语语音（正常、慢速和例句）。"
+    },
+    {
+      "name": "digital",
+      "ok": true,
+      "mode": "live",
+      "count": 11,
+      "date": "2026-11-24",
+      "targetDate": "2026-11-23",
+      "lastRunDate": "2026-11-24",
+      "lastSuccessAt": "2026-11-24T06:31:48.765Z",
+      "attemptedAt": "2026-11-24T06:31:48.765Z",
+      "ms": 4644,
+      "warning": ""
+    }
+  ],
+  "totalMs": 150020
+}

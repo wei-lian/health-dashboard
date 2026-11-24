@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-23",
+  "updatedAt": "2026-11-24T06:29:23.392Z",
+  "source": "中国新闻网 · 公开昨日归档",
+  "sourceUrl": "https://www.chinanews.com.cn/scroll-news/2026/1123/news.shtml",
+  "mode": "live",
+  "notice": "按分类精选昨日新闻标题，不是全网热搜排名；来源未提供摘要时只展示标题。",
+  "items": [
+    {
+      "id": "53ef165698f2ec",
+      "title": "外交部：中国不搞地缘争夺，不搞势力范围",
+      "summary": "",
+      "category": "社会",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/gn/2026/11-23/10736714.shtml"
+    },
+    {
+      "id": "bfb5911db8d57a",
+      "title": "走进民企看发展丨德康农牧董事长王德根：用科技创新解决农民养殖痛点",
+      "summary": "",
+      "category": "财经",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/cj/shipin/2026/11-23/news1075814.shtml"
+    },
+    {
+      "id": "61e470bc7a5fbe",
+      "title": "英国曼彻斯特演唱会现不明物质 逾1.2万人被紧急疏散",
+      "summary": "",
+      "category": "国际",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/gj/2026/11-23/10736724.shtml"
+    },
+    {
+      "id": "ae3efe88352c12",
+      "title": "横琴独牙传奇中式九球公开赛开幕 832名选手参赛",
+      "summary": "",
+      "category": "体育",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/ty/2026/11-23/10736704.shtml"
+    },
+    {
+      "id": "3668385bff4085",
+      "title": "菲律宾南部官员住宅遭火箭弹袭击 数百居民再度撤离",
+      "summary": "",
+      "category": "国际",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/gj/2026/11-23/10736723.shtml"
+    },
+    {
+      "id": "279d87643cd3ec",
+      "title": "特朗普再次发文：“祝贺英伟达作出了一个在我看来绝对出色的决定”",
+      "summary": "",
+      "category": "国际",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/gj/2026/11-23/10736721.shtml"
+    },
+    {
+      "id": "faf71d038411cb",
+      "title": "业内人士：AI智能体正成为高端手机出海竞争的新变量",
+      "summary": "",
+      "category": "财经",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/cj/2026/11-23/10736712.shtml"
+    },
+    {
+      "id": "7172222d880a63",
+      "title": "张利忠：对接东盟市场实际需求，助力各类市场主体发掘合作商机",
+      "summary": "",
+      "category": "财经",
+      "source": "中国新闻网",
+      "time": "2026-11-23",
+      "url": "https://www.chinanews.com.cn/cj/2026/11-23/10736720.shtml"
+    }
+  ]
+}

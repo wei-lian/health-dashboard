@@ -5,7 +5,8 @@ import Components from 'unplugin-vue-components/vite'
 import { fileURLToPath, URL } from 'node:url'
 import { personalDataPlugin } from '../server/personal-api.js'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: process.env.PAGES_BASE_PATH || (mode === 'pages' ? '/health-dashboard/' : '/'),
   root: fileURLToPath(new URL('.', import.meta.url)),
   plugins: [
     personalDataPlugin(),
@@ -16,4 +17,4 @@ export default defineConfig({
   build: { outDir: '../dist', emptyOutDir: true },
   server: { host: '127.0.0.1', strictPort: true },
   preview: { host: '127.0.0.1', strictPort: true },
-})
+}))

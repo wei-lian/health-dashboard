@@ -1,6 +1,34 @@
 # 每日一屏 DailyDash
 
-Vue 3 + Vite 本地生活仪表盘，包含运动睡眠记录、8 类每日内容、英文发音和歌曲试听。Node.js 在本机采集，页面只读本站 JSON，不直接抓取外站，无需数据库。
+[**打开每日一屏网页 →**](https://wei-lian.github.io/health-dashboard/)
+
+Vue 3 + Vite 生活仪表盘，包含运动睡眠记录、8 类每日内容、英文发音和歌曲试听。提供 GitHub Pages 在线版和 Node.js 本机版，无需数据库。
+
+## 在线访问与登录
+
+- **网页入口**：[https://wei-lian.github.io/health-dashboard/](https://wei-lian.github.io/health-dashboard/)。点击即可使用，不需要在电脑上启动项目。
+- **登录账号**：`admin`；**密码**：`123456`。未登录访问任意业务页面会跳转登录，成功后返回原页面；右上角可退出登录。
+- 登录状态保存在当前标签页的会话存储中，刷新页面保留，最长 12 小时；关闭会话或退出后需要重新登录。密码不写入会话存储。
+- 在线个人记录保存在**当前浏览器、当前网站**的 localStorage，不上传 GitHub，也不会读取本机 `.dailydash` 文件。不同设备和浏览器不自动同步，换设备请在「设置与备份」下载 / 导入 JSON。清除网站数据或关闭无痕窗口可能丢失记录。
+- **访问限制**：GitHub Pages 是公开静态托管，此处实现的是前端登录门槛，并非服务端身份认证。公开源码、构建资源和内容 JSON 可直接访问，不能用于保密访问控制。如需真正限制未授权访问，需要部署带服务端鉴权的后端或接入身份认证服务。
+
+### GitHub 自动发布
+
+`.github/workflows/pages.yml` 在推送 `main` 时安装依赖、执行 lint / 格式 / 测试、构建后发布到 GitHub Pages，也可在 Actions 手动运行。仓库 **Settings → Pages → Source** 应为 **GitHub Actions**。
+
+线上构建使用 `npm run build:pages`，自动适配 `/health-dashboard/` 子目录和浏览器存储模式。普通 `npm run dev` / `npm run build` / `npm start` 仍使用本机文件保存。
+
+线上内容使用 `site-content/` 中已校验的公开采集快照和其引用的图片、语音，页面会显示实际采集日期；部署不会自动联网采集。更新线上内容：
+
+```powershell
+npm run crawler
+npm run pages:snapshot
+git add site-content
+git commit -m "Update public content snapshot"
+git push origin main
+```
+
+快照脚本只读取八类公开内容和相关媒体，不读取运动、睡眠或其他个人记录。将来迁移到其他仓库时，可通过 `PAGES_BASE_PATH` 指定部署路径。
 
 ## 启动与首次采集
 
@@ -17,7 +45,7 @@ npm run dev
 
 日常使用：首次 `npm run build`，然后 `npm start`，打开 `http://127.0.0.1:4173/`；保留终端运行。`npm run preview` 也提供相同本机保存服务。采集会更新开发目录和已存在的 `dist/data`、`dist/media`，正常情况下无需每天重新构建。只重新读取页面文件可点击顶部刷新；该按钮不会启动本机采集。
 
-## 自动保存、下载备份与换电脑
+## 本机版自动保存、下载备份与换电脑
 
 运动、睡眠、收藏、掌握、答题、已读和外卖菜单通过 Node.js 本机接口自动写入当前 Windows 用户的文件：
 
@@ -160,7 +188,7 @@ web-vue/public/       # 本地资源和生成的 JSON / 音频
  tests/               # 健康边界、解析器、去重、锁、原子写入和播放状态测试
 ```
 
-采集内容保存在项目运行目录；健康和个人状态保存在用户目录文件，浏览器 localStorage 仅用作查看缓存和旧版迁移。无账号、无数据库。
+本机版采集内容保存在项目运行目录；健康和个人状态保存在用户目录文件，浏览器 localStorage 仅用作查看缓存和旧版迁移。在线版的个人记录仅保存在浏览器。两种模式均需要登录，无数据库。
 
 ## 验证
 
@@ -174,7 +202,7 @@ npm run schedule:preview
 git diff --check
 ```
 
-PRD 原冻结验收清单保留，实际追加需求与实现口径见 `PRD.md` 第 16–17 章。仍待补充：正式非遗名录核验、更多词汇和题库、进一步的个体健康分析、连续多日调度观测、PWA。没有对外部署或上传代码。
+PRD 原冻结验收清单保留，实际追加需求与实现口径见 `PRD.md` 第 16–17 章及本文的在线部署说明。仍待补充：正式非遗名录核验、更多词汇和题库、进一步的个体健康分析、连续多日调度观测、PWA。在线版通过 GitHub Actions 发布到 Pages。
 
 ## 声明
 

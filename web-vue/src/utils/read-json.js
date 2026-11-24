@@ -1,3 +1,5 @@
+import { publicAssetUrl } from './deployment.js'
+
 // 正式采集接入点：页面只读取静态 JSON，不直接抓取外站。
 export async function readJson(module) {
   const allowed = [
@@ -13,7 +15,7 @@ export async function readJson(module) {
   ]
   if (!allowed.includes(module)) throw new Error('未知数据模块')
   try {
-    const response = await fetch(`/data/${module}.json`, {
+    const response = await fetch(publicAssetUrl(`/data/${module}.json`), {
       cache: 'no-store',
       signal: AbortSignal.timeout(10000),
     })

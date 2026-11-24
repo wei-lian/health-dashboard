@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-23",
+  "updatedAt": "2026-11-24T06:29:25.839Z",
+  "source": "本地原创校对题库 · 97 题 · 30 天不重复",
+  "mode": "curated",
+  "items": [
+    {
+      "id": "2026-11-23:bank-067",
+      "questionId": "bank-067",
+      "type": "single",
+      "category": "公考常识-人文",
+      "question": "中国古代活字印刷术的发明者通常认为是？",
+      "options": [
+        "毕昇",
+        "蔡伦",
+        "张衡",
+        "祖冲之"
+      ],
+      "answer": "A",
+      "explain": "北宋毕昇发明胶泥活字印刷术。",
+      "knowledge": "人文"
+    },
+    {
+      "id": "2026-11-23:bank-068",
+      "questionId": "bank-068",
+      "type": "single",
+      "category": "公考常识-人文",
+      "question": "东汉时期改进造纸术的是？",
+      "options": [
+        "毕昇",
+        "蔡伦",
+        "沈括",
+        "宋应星"
+      ],
+      "answer": "B",
+      "explain": "蔡伦改进造纸原料与工艺，促进纸张推广。",
+      "knowledge": "人文"
+    },
+    {
+      "id": "2026-11-23:bank-069",
+      "questionId": "bank-069",
+      "type": "single",
+      "category": "公考常识-人文",
+      "question": "《天工开物》的作者是？",
+      "options": [
+        "沈括",
+        "李时珍",
+        "宋应星",
+        "徐霞客"
+      ],
+      "answer": "C",
+      "explain": "《天工开物》系统记述明代农业与手工业生产技术。",
+      "knowledge": "人文"
+    }
+  ]
+}

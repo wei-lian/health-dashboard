@@ -1,5 +1,7 @@
 import { reactive, computed } from 'vue'
 import { localDate, streakDays } from '../utils/health.js'
+import { isBrowserStorage } from '../utils/deployment.js'
+import { requestBrowserPersonalData } from '../utils/browser-personal-data.js'
 import {
   emptyPersonalData,
   validatePersonalData,
@@ -23,6 +25,7 @@ try {
 }
 export const state = reactive(cached)
 export const sync = reactive({
+  mode: isBrowserStorage ? 'browser' : 'file',
   ready: false,
   online: false,
   saving: false,
@@ -48,6 +51,7 @@ export function notify(text, type = 'success') {
 
 // API 仅访问当前本机服务，失败不假装已保存。
 async function requestPersonal(path = '', options = {}) {
+  if (isBrowserStorage) return requestBrowserPersonalData(path, options)
   const response = await fetch('/api/personal-data' + path, {
     ...options,
     cache: 'no-store',
@@ -103,7 +107,9 @@ export async function initializePersonalData() {
           method: 'POST',
           body: JSON.stringify({ data: recover }),
         })
-        sync.message = '原浏览器记录已迁移到电脑文件，迁移原件另存于 recoveries 文件夹。'
+        sync.message = isBrowserStorage
+          ? '已恢复此浏览器原有记录，请定期下载 JSON 备份。'
+          : '原浏览器记录已迁移到电脑文件，迁移原件另存于 recoveries 文件夹。'
       }
       adopt(current)
       if (legacy && !migrated) {
@@ -138,7 +144,7 @@ export async function refreshPersonalData() {
     try {
       const value = await requestPersonal()
       if (sync.storeId && (!value.exists || value.storeId !== sync.storeId))
-        throw new Error('本机数据文件被移除或替换，请重新连接并核对备份')
+        throw new Error('保存的记录被移除或替换，请重新连接并核对备份')
       if (!sync.saving && value.revision > sync.revision) adopt(value)
       else if (!sync.saving) {
         sync.online = true
@@ -160,7 +166,7 @@ export async function refreshPersonalData() {
 export async function persist(changes) {
   if (sync.saving) return false
   if (!sync.ready || !sync.online) {
-    notify('电脑保存服务未连接，请点击顶部重新连接；本次修改尚未保存。', 'error')
+    notify('保存服务未就绪，请点击顶部重新连接；本次修改尚未保存。', 'error')
     return false
   }
   sync.saving = true
@@ -178,7 +184,7 @@ export async function persist(changes) {
       notify('其他窗口已更新，已读取最新数据，请重新保存本次修改。', 'error')
     } else {
       sync.error = error.message
-      notify('保存失败，本次修改未写入电脑：' + error.message, 'error')
+      notify('保存失败，本次修改尚未保存：' + error.message, 'error')
     }
     return false
   } finally {

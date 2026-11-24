@@ -14,7 +14,7 @@ async function exportData() {
   if (exporting.value || sync.saving) return
   exporting.value = true
   try {
-    if (!(await refreshPersonalData())) throw new Error('请先连接本机保存服务，再下载最新备份')
+    if (!(await refreshPersonalData())) throw new Error('请先连接保存服务，再下载最新备份')
     const blob = new Blob(
       [JSON.stringify({ version: 2, exportedAt: new Date().toISOString(), data: state }, null, 2)],
       { type: 'application/json' },
@@ -62,7 +62,7 @@ async function restore() {
         : preview.value
     if (await persist(data)) {
       preview.value = null
-      notify('备份已写入电脑，其他浏览器将自动同步。')
+      notify(sync.mode === 'browser' ? '备份已恢复到当前浏览器。' : '备份已写入电脑，其他浏览器将自动同步。')
     }
   } catch (error) {
     notify(error.message, 'error')
@@ -81,11 +81,18 @@ async function restore() {
       </div>
       <div class="settings-body">
         <h3>把生活的记录，好好留住。</h3>
-        <p>
+        <p v-if="sync.mode === 'browser'">
+          线上版将运动、睡眠、学习状态和外卖菜单保存在当前浏览器，不上传到
+          GitHub。换设备或浏览器不会自动同步，请先下载 JSON 备份，再到新设备导入。
+        </p>
+        <p v-else>
           运动、睡眠、学习状态和外卖菜单会自动保存到电脑文件，同一台电脑的不同浏览器共用。下载备份后，可在另一台电脑启动本项目并导入。
         </p>
         <p class="storage-path">{{ sync.file || '用户目录/.dailydash/personal-data.json' }}</p>
-        <p class="muted">
+        <p v-if="sync.mode === 'browser'" class="muted">
+          清理网站数据、使用无痕窗口或更换网址可能丢失记录。建议定期下载备份，完整替换前先备份当前记录。
+        </p>
+        <p v-else class="muted">
           每次保存保留前一版本，最多留 30 份；原浏览器迁移原件另存 recoveries。浏览器缓存用于断开服务时查看。
         </p>
         <div class="backup-counts">
@@ -132,12 +139,16 @@ async function restore() {
           <p>
             {{ preview.sports.length }} 条运动 · {{ preview.sleeps.length }} 条睡眠 ·
             {{ preview.mealTypes.length }} 个外卖类型、{{ preview.mealHistory.length }}
-            次菜单选择。合并时本机同 ID 或同睡眠日的记录优先；原文件可完整保留。
+            次菜单选择。合并时当前同 ID 或同睡眠日的记录优先；原备份文件不会改动。
           </p>
           <label class="import-mode"
             >导入方式<select v-model="importMode" :disabled="restoring">
               <option value="merge">合并，保留本机已有记录</option>
-              <option value="replace">完整替换，本机原版本自动备份</option>
+              <option value="replace">
+                {{
+                  sync.mode === 'browser' ? '完整替换（建议先下载当前备份）' : '完整替换，本机原版本自动备份'
+                }}
+              </option>
             </select></label
           >
           <div class="button-group">
@@ -148,7 +159,7 @@ async function restore() {
               @click="restore"
             >
               <AppIcon v-if="restoring" name="refresh" class="spinning" :size="17" />{{
-                restoring ? '正在写入…' : '确认导入电脑'
+                restoring ? '正在写入…' : '确认导入'
               }}</button
             ><button class="button secondary" :disabled="restoring" @click="preview = null">取消</button>
           </div>
@@ -172,7 +183,7 @@ async function restore() {
           <span>采集日期</span><strong>昨日内容；歌曲和报价按实际快照日期展示</strong>
         </div>
         <div class="about-row"><span>音乐播放</span><strong>公开试听片段 · 完整版前往平台</strong></div>
-        <div class="about-row"><span>账号与数据库</span><strong>无需账号 · 无数据库</strong></div>
+        <div class="about-row"><span>登录账号</span><strong>admin · 无数据库</strong></div>
         <p class="disclaimer">
           个人学习自用，禁止商用与二次分发。以上为通用睡眠卫生建议，不构成医疗诊断；持续失眠或伴随其他症状请就医。
         </p>

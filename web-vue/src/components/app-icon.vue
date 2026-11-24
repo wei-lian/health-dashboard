@@ -34,6 +34,11 @@ import {
   CircleHelp,
   Play,
   Pause,
+  LogOut,
+  UserRound,
+  LockKeyhole,
+  Eye,
+  EyeOff,
 } from 'lucide-vue-next'
 defineProps({ name: { type: String, required: true }, size: { type: Number, default: 20 } })
 const icons = {
@@ -71,6 +76,11 @@ const icons = {
   help: CircleHelp,
   play: Play,
   pause: Pause,
+  logout: LogOut,
+  user: UserRound,
+  lock: LockKeyhole,
+  eye: Eye,
+  'eye-off': EyeOff,
 }
 </script>
 

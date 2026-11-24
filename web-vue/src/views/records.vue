@@ -52,7 +52,13 @@ function close() {
 <template>
   <div>
     <div class="toolbar">
-      <div class="soft-note"><AppIcon name="shield" :size="17" />记录自动保存到电脑文件，跨浏览器同步</div>
+      <div class="soft-note">
+        <AppIcon name="shield" :size="17" />{{
+          sync.mode === 'browser'
+            ? '记录保存在当前浏览器，请定期下载备份'
+            : '记录自动保存到电脑文件，跨浏览器同步'
+        }}
+      </div>
       <div class="button-group">
         <button class="button secondary" @click="open('sleep')">
           <AppIcon name="moon" :size="17" />记录睡眠</button

@@ -1,5 +1,6 @@
 import { reactive } from 'vue'
 import { notify } from './local-store.js'
+import { publicAssetUrl } from '../utils/deployment.js'
 
 export const playback = reactive({
   key: '',
@@ -43,7 +44,7 @@ async function playUrl(source, details) {
     stopAudio()
     audio ||= new Audio()
     audio.preload = 'none'
-    audio.src = source
+    audio.src = publicAssetUrl(source)
     Object.assign(playback, { ...details, error: '', loading: true, playing: false })
   }
   const token = generation

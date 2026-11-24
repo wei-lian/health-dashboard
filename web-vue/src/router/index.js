@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import { getSession, loginDestination } from '../utils/auth-session.js'
 
 export const navigation = [
   {
@@ -75,18 +76,35 @@ export const navigation = [
   },
 ]
 
-export default createRouter({
+const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: '/', component: () => import('../views/home.vue') },
-    { path: '/records', component: () => import('../views/records.vue') },
-    ...['daily', 'music', 'food', 'learn', 'digital'].map((path) => ({
-      path: `/${path}`,
-      component: () => import('../views/explore.vue'),
-    })),
-    { path: '/meals', component: () => import('../views/meals.vue') },
-    { path: '/settings', component: () => import('../views/settings.vue') },
+    { path: '/login', name: 'login', component: () => import('../views/login.vue'), meta: { public: true } },
+    {
+      path: '/',
+      component: () => import('../layouts/dashboard-layout.vue'),
+      children: [
+        { path: '/', component: () => import('../views/home.vue') },
+        { path: '/records', component: () => import('../views/records.vue') },
+        ...['daily', 'music', 'food', 'learn', 'digital'].map((path) => ({
+          path: `/${path}`,
+          component: () => import('../views/explore.vue'),
+        })),
+        { path: '/meals', component: () => import('../views/meals.vue') },
+        { path: '/settings', component: () => import('../views/settings.vue') },
+      ],
+    },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
   scrollBehavior: () => ({ top: 0 }),
 })
+
+// 所有业务页面统一检查登录，深链接登录后返回原来的页面。
+router.beforeEach((to) => {
+  const session = getSession()
+  if (!to.meta.public && !session)
+    return { name: 'login', query: to.fullPath === '/' ? {} : { redirect: to.fullPath }, replace: true }
+  if (to.name === 'login' && session) return loginDestination(to.query.redirect)
+})
+
+export default router

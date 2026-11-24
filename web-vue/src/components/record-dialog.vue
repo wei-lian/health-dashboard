@@ -196,11 +196,15 @@ onUnmounted(() => {
             :aria-busy="saving"
           >
             <AppIcon :name="saving ? 'refresh' : 'check'" :class="{ spinning: saving }" :size="18" />{{
-              saving ? '正在写入电脑…' : '保存记录'
+              saving ? '正在保存…' : '保存记录'
             }}
           </button>
           <p class="form-privacy">
-            <AppIcon name="shield" :size="13" />保存后自动写入电脑文件，其他浏览器也能读取
+            <AppIcon name="shield" :size="13" />{{
+              sync.mode === 'browser'
+                ? '记录仅保存在当前浏览器，换设备请先下载备份'
+                : '保存后自动写入电脑文件，其他浏览器也能读取'
+            }}
           </p>
         </form>
       </section>

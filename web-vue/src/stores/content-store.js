@@ -3,6 +3,7 @@ import * as demo from '../data/demo.js'
 import { validateData } from '../../../shared/content-schema.js'
 import { simplifyPoem } from '../../../shared/poetry.js'
 import { readJson } from '../utils/read-json.js'
+import { publicAssetUrl } from '../utils/deployment.js'
 
 export const news = reactive([...demo.news])
 export const songs = reactive([...demo.songs])
@@ -59,7 +60,8 @@ export async function loadContent() {
       })),
     )
     replace(knowledge, content.files.knowledge?.items)
-    if (content.files.food?.today) Object.assign(food, content.files.food.today)
+    if (content.files.food?.today)
+      Object.assign(food, { ...content.files.food.today, img: publicAssetUrl(content.files.food.today.img) })
     if (content.files.digital)
       replace(devices, [
         ...content.files.digital.phones.map((item) => ({ ...item, type: 'phone' })),
